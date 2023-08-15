@@ -8,12 +8,8 @@ Table [dbo].[ServicesStatus]  consists of columns: [MachineName] [varchar](100) 
 
 INSTALLATION:
 
-1. Create DB Mail Profile.
-
-2. Create [dbo].[ServicesStatus] table - run query from file "CreateTable for services status monitoring.sql".
-
-3. Create procedure for mail alerts - run query from file "StoppedServices - Send Mail Alerts.sql".
-
-4. Create new SQL JOB with necessary execution interval. In the first step paste the Powershell code from file "QueryServiceStatus.ps1". Assign values to variables at the beginning of file that stores password and username to machines with services, password and username and name of SQL instance under the job is running.
-
-5. Create second step of JOB - for stored procedure from pt. 3 execution. 
+* Create DB Mail Profile.
+* Create [dbo].[ServicesStatus] table - run query from file "CreateTable for services status monitoring.sql".
+* Create procedure for mail alerts - run query from file "StoppedServices - Send Mail Alerts.sql".
+* Create new SQL JOB with necessary execution interval. In the first step paste the Powershell code from file "QueryServiceStatus.ps1". Assign values to variables at the beginning of file that stores password and username to machines with services, password and username and name of SQL instance under the job is running.
+* Create second step of JOB - for stored procedure from pt. 3 execution. 
